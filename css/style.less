@@ -1,0 +1,82 @@
+@cor-primaria: #4CAF50;
+@cor-secundaria: #ffffff;
+@cor-fundo: #f4f7f8;
+@cor-borda: #ddd;
+@cor-texto: #333;
+@cor-botao-hover: darken(@cor-primaria, 10%);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: @cor-fundo;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: @cor-texto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: @cor-secundaria;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    color: @cor-primaria;
+    margin-bottom: 20px;
+    margin-right: 5px;
+}
+
+input, select {
+    width: calc(50% - 12px);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid @cor-borda;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s;
+    font-size: 16px;
+
+    &:focus {
+        border-color: @cor-primaria;
+    }
+}
+
+select {
+    width: calc(100% - 24px);
+}
+
+button {
+    background-color: @cor-primaria;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: @cor-botao-hover;
+    }
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: @cor-fundo;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid @cor-borda;
+}
